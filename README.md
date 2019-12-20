@@ -1,26 +1,57 @@
 > 郑重声明：本项目的所有代码和相关文章， 仅用于经验技术交流分享，禁止将相关技术应用到不正当途径，因为滥用技术产生的风险与本人无关。
 
-# Review_Reverse 2019年末逆向复习系列（持续更新）
-
+# :1st_place_medal:Review_Reverse 2019年末逆向复习系列（持续更新）:exclamation:
 ![](https://github.com/lateautumn4lin/Review_Reverse/blob/master/main.png)
 
-# 前言
+# :family_man_man_girl_boy:前言
 
-马上到2019年末啦！今年接触到到逆向案例还是很多，所以单开个项目给自己复习一下！
+马上到2019年末啦！今年接触到的逆向案例还是很多，所以单开个项目给自己复习一下！
 
-# 目录
+# :handshake:使用方式
 
-- [案例分析](#案例分析)
-  - [1 淘宝](#1-淘宝)
+1. 下载项目
+
+```shell
+git clone git@github.com:lateautumn4lin/Review_Reverse.git
+```
+
+2. 创建环境并安装依赖
+
+```shell
+conda create -n review_reverse python=3.8
+
+. activate review_reverse
+
+pip install -r requirements.txt
+
+npm install express --save
+```
+
+3. 运行你想要的项目，例如猫眼电影
+
+```shell
+python -m maoyao.test (以模块化运行)
+```
+
+# :calendar:目录
+
+- [:page_with_curl:案例分析](#案例分析)
+  - [:one: 淘宝:heavy_check_mark:](#1-淘宝)
     - [1.1 WEB淘宝sign参数逆向破解](#1.1-WEB淘宝sign参数逆向破解)
-  - [2 努比亚](#2-努比亚)
+  - [:two: 努比亚:heavy_check_mark:](#2-努比亚)
     - [2.1 努比亚Cookie生成逆向分析](#2.1-努比亚Cookie生成逆向分析)
-  - [3 百度指数](#3-百度指数)
+  - [:three: 百度指数:heavy_check_mark:](#3-百度指数)
     - [3.1 百度指数Data加密逆向破解](#3.1-百度指数Data加密逆向破解)
-  - [4 今日头条WEB版](#4-今日头条WEB版)
+  - [:four: 今日头条WEB版:heavy_check_mark:](#4-今日头条WEB版)
     - [4.1 今日头条WEB端_signature、as、cp参数逆向分析](#4.1-今日头条WEB端_signature、as、cp参数逆向分析)
-  - [5 知乎WEB版](#5-知乎WEB版)
+  - [:five: 知乎WEB版:heavy_check_mark:](#5-知乎WEB版)
     - [5.1 知乎登录formdata加密逆向破解](#5.1-知乎登录formdata加密逆向破解)
+  - [:six: KNN猫眼字体反爬:heavy_check_mark:](#6-KNN猫眼字体反爬)
+    - [6.1 从猫眼字体反爬分析谈谈字体反爬的前世今生](#6.1-从猫眼字体反爬分析谈谈字体反爬的前世今生)
+  - [:seven: Boss直聘:heavy_check_mark:](#7-Boss直聘)
+    - [7.1 Boss直聘Cookie加密字段__zp_stoken__逆向分析](#7.1-Boss直聘Cookie加密字段__zp_stoken__逆向分析)
+  - [:eight: pdd:heavy_check_mark:](#8-pdd)
+    - [8.1 拼夕夕Web端anti_content参数逆向分析](#8.1-拼夕夕Web端anti_content参数逆向分析)
 
 # 案例分析
 
@@ -90,4 +121,47 @@
 
 - **逆向代码**：[知乎登录formdata参数解密代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/zhihu/m_zhihu.py)
 - **实战代码**：[知乎模拟登录代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/zhihu/m_zhihu_example.py)
+
+## 6 KNN猫眼字体反爬
+
+## 6.1 从猫眼字体反爬分析谈谈字体反爬的前世今生
+
+- **参考文章**：
+
+  - [微信文章：2019年末逆向复习系列之从猫眼字体反爬分析谈谈字体反爬的前世今生](https://mp.weixin.qq.com/s?__biz=MzIzOTQzNDIyOA==&mid=2247484031&idx=1&sn=eff03539c7f593510179202a4d3fe122&chksm=e92b62e4de5cebf21afae6696f1e5f31b361407cc7d88c137412547ffbcfb9446770623c232f&token=699370238&lang=zh_CN#rd)
+
+  - [个人博客文章：2019年末逆向复习系列之从猫眼字体反爬分析谈谈字体反爬的前世今生](https://cloudcrawler.club/cong-mao-yan-zi-ti-fan-pa-fen-xi-tan-tan-zi-ti-fan-pa-de-qian-shi-jin-sheng.html)
+
+- **逆向代码**：[猫眼字体反爬KNN训练代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/maoyan/knn_test.py)
+- **实战代码**：[猫眼字体反爬实战分析](https://github.com/lateautumn4lin/Review_Reverse/blob/master/maoyan/test.py)
+
+## 7 Boss直聘
+
+## 7.1 Boss直聘Cookie加密字段__zp_stoken__逆向分析
+
+- **参考文章**：
+
+  - [微信文章：2019年末逆向复习系列之Boss直聘Cookie加密字段__zp_stoken__逆向分析](https://mp.weixin.qq.com/s?__biz=MzIzOTQzNDIyOA==&mid=2247484031&idx=1&sn=eff03539c7f593510179202a4d3fe122&chksm=e92b62e4de5cebf21afae6696f1e5f31b361407cc7d88c137412547ffbcfb9446770623c232f&token=699370238&lang=zh_CN#rd)
+
+  - [个人博客文章：2019年末逆向复习系列之Boss直聘Cookie加密字段__zp_stoken__逆向分析](https://cloudcrawler.club/boss-zhi-pin-cookie-jia-mi-zi-duan-zp-stoken-ni-xiang-fen-xi.html)
+
+- **逆向代码**：[Boss直聘加密代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/boss_zp/encrypt.js)
+- **实战代码**：[Boss直聘实战分析](https://github.com/lateautumn4lin/Review_Reverse/blob/master/boss_zp/m_boss_zp_example.py)
+
+## 8 pdd
+
+## 8.1 拼夕夕Web端anti_content参数逆向分析
+
+- **参考文章**：
+
+  - [微信文章：2019年末逆向复习系列之拼夕夕Web端anti_content参数逆向分析](https://mp.weixin.qq.com/s?__biz=MzIzOTQzNDIyOA==&mid=2247484031&idx=1&sn=eff03539c7f593510179202a4d3fe122&chksm=e92b62e4de5cebf21afae6696f1e5f31b361407cc7d88c137412547ffbcfb9446770623c232f&token=699370238&lang=zh_CN#rd)
+
+  - [个人博客文章：2019年末逆向复习系列之拼夕夕Web端anti_content参数逆向分析](https://cloudcrawler.club/pin-xi-xi-web-duan-anti-content-can-shu-ni-xiang-fen-xi.html)
+
+- **逆向代码**：[pdd加密服务代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/pdd/encrypt_server.js)
+- **实战代码**：[pdd实战案例代码](https://github.com/lateautumn4lin/Review_Reverse/blob/master/pdd/m_pdd_example.py)
+
+### 项目以及个人立场声明
+
+再次郑重声明：本项目的所有代码和相关文章， 仅用于经验技术交流分享，禁止将相关技术应用到不正当途径，因为滥用技术产生的风险与本人无关。
 
